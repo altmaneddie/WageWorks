@@ -5,17 +5,20 @@ import './App.css';
 import Teams from './mains/teams';
 
 class App extends Component {
-  constructor(){
-    super();
-    const rootRef = firebase.database().ref().child('Team');
 
+  constructor () {
+    super();''
+    const rootRef = firebase.database().ref().child('Team');
+    let data;
     rootRef.on('value', snap => {
-      this.state = snap.val();
-      console.log(this.state);
-    })
+      data = snap.val();
+      console.log(data);
+    });
+    this.state = data;
   }
   
   render() {
+    console.log(this.state);
     return (
       <BrowserRouter>
       <div className="App">
