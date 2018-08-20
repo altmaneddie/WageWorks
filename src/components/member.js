@@ -2,7 +2,7 @@ import React from 'react';
 
 class Member extends React.Component {
 
-  constructor(){
+  constructor() {
     super();
   }
 
@@ -13,12 +13,13 @@ class Member extends React.Component {
 
     return (
       <div >
+        <span><em>{"Last Name/ First Name"}</em></span>
         {
-          teamMembers.map((el,k) => {
+          teamMembers.map((el, k) => {
             console.log(el);
             return (
               <div key={k}>
-                <span>{`First Name:${teamData[el].last_name}  ${teamData[el].first_name}`}</span>
+                <span>{`Name:${teamData[el].last_name} / ${teamData[el].first_name}`}</span>
               </div>
             )
           })

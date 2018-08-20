@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
-import Teams from './mains/teams';
 import { base } from './base';
+import Utils from './pages/utils';
+import Util from './components/util';
+import Teams from './pages/teams';
 
 class App extends Component {
 
@@ -28,7 +30,6 @@ class App extends Component {
   componentWillUnmount() {
     base.removeBinding(this.teamsRef);
     base.removeBinding(this.utilsRef);
-
   }
 
   render() {
@@ -37,6 +38,8 @@ class App extends Component {
       <BrowserRouter>
         <div className="App">
           <Route exact path="/teams" render={() => (<Teams teams={this.state.teams} />)} />
+          <Route exact path="/utilities" render={() => (<Utils utils={this.state.utils} />)} />
+          <Route exact path="/util" render={() => (<Util utils={this.state.utils} />)} />
         </div>
       </BrowserRouter>
     );

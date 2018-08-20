@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Member from './member';
+import Member from '../components/member';
 
 class Teams extends React.Component {
 
