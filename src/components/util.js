@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 class Util extends React.Component {
-
 
   render() {
     console.log(this.props);
