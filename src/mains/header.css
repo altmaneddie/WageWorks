@@ -1,0 +1,21 @@
+.navLink{
+  text-decoration: none;
+  font-size: 30px;
+  margin-left: 75px;
+  color: blue;
+}
+
+.navLink:hover{
+  color: purple;
+}
+
+.menu-bar{
+  margin-top: 70px;
+  min-width: 100%;
+}
+
+.selected{
+  text-decoration: none;
+  font-weight: bold;
+  color: white !important;
+}
