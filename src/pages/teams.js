@@ -7,13 +7,14 @@ class Teams extends React.Component {
     this.state = {
       selected: ''
     }
+    this.showTeam = this.showTeam.bind(this);
   }
 
-  showTeam = (k) => {
-    console.log(k, this.state.selected);
-    this.setState = ((prevState, props) => ({
-      selected: k
-    }))
+  showTeam = (e) => {
+    console.log(e.currentTarget.id, this.state.selected);
+    this.setState = ({
+      selected: e.currentTarget.id
+    })
   }
 
   render() {
@@ -28,7 +29,7 @@ class Teams extends React.Component {
           {
             myTeams.map((el, k) => {
               return (
-                <div className="team-list-member" key={k} id={k} onClick={this.showTeam.bind(this, k)}>
+                <div className="team-list-member" key={k} id={k} onClick={this.showTeam}>
                   <h1>{`${el}`}</h1>
                 </div>
               );
