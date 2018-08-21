@@ -7,19 +7,17 @@ class Teams extends React.Component {
     this.state = {
       selected: ''
     }
-    this.showTeam = this.showTeam.bind(this);
   }
 
   showTeam = (e) => {
-    console.log(e.currentTarget.id, this.state.selected);
-    this.setState = ({
+    this.setState({
       selected: e.currentTarget.id
     })
   }
 
   render() {
 
-    console.log(this.state);
+    console.log(this.state.selected);
     const myTeams = Object.keys(this.props.teams);
     const team = this.props.teams;
 
@@ -37,12 +35,11 @@ class Teams extends React.Component {
           }
         </div >
 
-        {(this.state.selected !== '') &&
-          (
-            <div>
-              <Member data={team.myTeams[this.state.selected]} />
-            </div>
-          )}
+        {(this.state.selected) && (
+          <div>
+            <Member data={team[myTeams[this.state.selected]]} />
+          </div>
+        )}
       </div>
     )
   }

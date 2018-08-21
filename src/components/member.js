@@ -8,10 +8,8 @@ class Member extends React.Component {
 
     return (
       <div >
-        <span><em>{"Last Name/ First Name"}</em></span>
         {
           teamMembers.map((el, k) => {
-            console.log(el);
             return (
               <div key={k}>
                 <span>{`Name:${teamData[el].last_name} / ${teamData[el].first_name}`}</span>
