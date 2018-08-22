@@ -24,9 +24,6 @@ class Teams extends React.Component {
     const myTeams = Object.keys(this.props.teams);
     const team = this.props.teams;
 
-    // const myHistories = Object.keys(this.props.history);
-    // const history = this.props.history;
-
     return (
       <div>
         <div></div>

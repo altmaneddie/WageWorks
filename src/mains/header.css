@@ -1,23 +1,24 @@
 .navLink{
   text-decoration: none;
   font-size: 30px;
-  color: blue;
-  margin:auto;
+  color: black;
+  background-color: #FF9900;
+  padding: 15px 40px;
+  margin-left: 20px;
 }
 
 .navLink:hover{
-  color: purple;
+  background-color: #f9ab36;
 }
 
 .menu-bar{
   display: flex;
   margin-top: 70px;
-  width: 60%;
-  margin-left: 20%;
+  justify-content: flex-start;
 }
 
 .selected{
   text-decoration: none;
-  font-weight: bold;
   color: white !important;
+  background-color: #f9ab36;
 }

@@ -1,0 +1,11 @@
+.update-wrapper{
+  margin: 25px 45px;
+}
+
+.update-date{
+  display: block;
+  text-align: end;
+  margin-right: 45px;
+  font-weight: bold;
+  font-size: 15px;
+}

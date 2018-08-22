@@ -12,10 +12,11 @@ class Header extends React.Component {
           <img />
         </Link>
         <div className="menu-bar">
-          <NavLink activeClassName="selected" className="navLink" to="/teams">Teams</NavLink>
-          <NavLink activeClassName="selected" className="navLink" to="/utilities">Utilities</NavLink>
-          <NavLink activeClassName="selected" className="navLink" to="/repository">Repository</NavLink>
-          <NavLink activeClassName="selected" className="navLink" to="/leadership">Leadership</NavLink>
+            <NavLink activeClassName="selected" className="navLink" to="/teams">Teams</NavLink>
+            <NavLink activeClassName="selected" className="navLink" to="/utilities">Utilities</NavLink>
+            <NavLink activeClassName="selected" className="navLink" to="/repository">Repository</NavLink>
+            <NavLink activeClassName="selected" className="navLink" to="/updates">Updates</NavLink>
+            <NavLink activeClassName="selected" className="navLink" to="/leadership">Leadership</NavLink>
         </div>
       </div >
     )

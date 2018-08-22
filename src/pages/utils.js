@@ -53,8 +53,8 @@ class Utils extends React.Component {
               <ul className="photo-list">
                 {(utils[myUtils[this.state.selected]].photos).map((el, k) => {
                   return (
-                    <li className="photo-item" >
-                      <span>{k}</span>
+                    <li key={k} className="photo-item" >
+                      <span className="photo-number">{k}</span>
                       <img src={el} />
                     </li>
                   )

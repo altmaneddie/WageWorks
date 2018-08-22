@@ -6,6 +6,7 @@ import Header from './mains/header';
 import LandingPage from './pages/landing-page';
 import Utils from './pages/utils';
 import Repository from './pages/repository';
+import Updates from './pages/updates';
 import Teams from './pages/teams';
 
 class App extends Component {
@@ -16,7 +17,8 @@ class App extends Component {
       teams: {},
       utils: {},
       templates: {},
-      history: {}
+      history: {},
+      updates: {}
     }
   }
 
@@ -37,12 +39,18 @@ class App extends Component {
       context: this,
       state: 'history'
     })
+    this.updatesRef = base.syncState('updates', {
+      context: this,
+      state: 'updates'
+    })
   }
 
   componentWillUnmount() {
     base.removeBinding(this.teamsRef);
     base.removeBinding(this.utilsRef);
     base.removeBinding(this.templatesRef);
+    base.removeBinding(this.historyRef);
+    base.removeBinding(this.updatesRef);
   }
 
   render() {
@@ -51,11 +59,13 @@ class App extends Component {
         <div className="App">
           <div className='header'>
             <Header />
+            <hr />
           </div>
           <div>
             <Route exact path="/" render={() => (<LandingPage teams={this.state.teams} />)} />
             <Route exact path="/teams" render={() => (<Teams teams={this.state.teams} history={this.state.history} />)} />
             <Route exact path="/utilities" render={() => (<Utils utils={this.state.utils} />)} />
+            <Route exact path="/updates" render={() => (<Updates updates={this.state.updates} />)} />
             <Route exact path="/repository" render={() => (<Repository templates={this.state.templates} />)} />
           </div>
         </div>
