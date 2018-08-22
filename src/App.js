@@ -5,7 +5,7 @@ import { base } from './base';
 import Header from './mains/header';
 import LandingPage from './pages/landing-page';
 import Utils from './pages/utils';
-import Util from './components/util';
+import Repository from './pages/repository';
 import Teams from './pages/teams';
 
 class App extends Component {
@@ -14,7 +14,9 @@ class App extends Component {
     super();
     this.state = {
       teams: {},
-      utils: {}
+      utils: {},
+      templates: {},
+      history: {}
     }
   }
 
@@ -27,11 +29,20 @@ class App extends Component {
       context: this,
       state: 'utils'
     })
+    this.templatesRef = base.syncState('templates', {
+      context: this,
+      state: 'templates'
+    })
+    this.historyRef = base.syncState('history', {
+      context: this,
+      state: 'history'
+    })
   }
 
   componentWillUnmount() {
     base.removeBinding(this.teamsRef);
     base.removeBinding(this.utilsRef);
+    base.removeBinding(this.templatesRef);
   }
 
   render() {
@@ -43,9 +54,9 @@ class App extends Component {
           </div>
           <div>
             <Route exact path="/" render={() => (<LandingPage teams={this.state.teams} />)} />
-            <Route exact path="/teams" render={() => (<Teams teams={this.state.teams} />)} />
+            <Route exact path="/teams" render={() => (<Teams teams={this.state.teams} history={this.state.history} />)} />
             <Route exact path="/utilities" render={() => (<Utils utils={this.state.utils} />)} />
-            <Route exact path="/util" render={() => (<Util utils={this.state.utils} />)} />
+            <Route exact path="/repository" render={() => (<Repository templates={this.state.templates} />)} />
           </div>
         </div>
       </BrowserRouter>

@@ -1,0 +1,13 @@
+.list-member{
+  margin: 40px;
+}
+
+.list-member:hover{
+  color:teal;
+  cursor: pointer;
+}
+
+.teams{
+  display: flex;
+  justify-content: center;
+}

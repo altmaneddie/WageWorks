@@ -1,0 +1,20 @@
+.member-ul{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+li{
+  list-style: none;
+  margin-left: 25px;
+  font-size: 25px;
+}
+
+hr{
+  margin-left: 45px;
+  margin-right: 120px;
+}
+
+.member-img{
+  height: 200px;
+}

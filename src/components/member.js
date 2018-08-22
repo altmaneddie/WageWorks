@@ -1,10 +1,11 @@
 import React from 'react';
+import './member.css';
 
 class Member extends React.Component {
   render() {
     const teamMembers = Object.keys(this.props.data);
     const teamData = this.props.data;
-    console.log(teamMembers)
+    // console.log(teamMembers)
 
     return (
       <div >
@@ -12,7 +13,11 @@ class Member extends React.Component {
           teamMembers.map((el, k) => {
             return (
               <div key={k}>
-                <span>{`Name:${teamData[el].last_name} / ${teamData[el].first_name}`}</span>
+                <ul className="member-ul">
+                  <li><img src={teamData[el].photo} className="member-img" /></li>
+                  <li>{`Name: ${teamData[el].last_name} ${teamData[el].first_name}`}</li>
+                </ul>
+                <hr />
               </div>
             )
           })

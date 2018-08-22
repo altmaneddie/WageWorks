@@ -1,8 +1,8 @@
 .navLink{
   text-decoration: none;
   font-size: 30px;
-  margin-left: 75px;
   color: blue;
+  margin:auto;
 }
 
 .navLink:hover{
@@ -10,8 +10,10 @@
 }
 
 .menu-bar{
+  display: flex;
   margin-top: 70px;
-  min-width: 100%;
+  width: 60%;
+  margin-left: 20%;
 }
 
 .selected{
