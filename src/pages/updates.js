@@ -7,7 +7,6 @@ class Updates extends React.Component {
 
     const myUpdates = Object.keys(this.props.updates);
     const updates = this.props.updates;
-    console.log(updates, myUpdates);
 
     return (
       <div>

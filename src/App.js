@@ -7,6 +7,7 @@ import LandingPage from './pages/landing-page';
 import Utils from './pages/utils';
 import Repository from './pages/repository';
 import Updates from './pages/updates';
+import Leadership from './pages/leadership';
 import Teams from './pages/teams';
 
 class App extends Component {
@@ -18,7 +19,8 @@ class App extends Component {
       utils: {},
       templates: {},
       history: {},
-      updates: {}
+      updates: {},
+      leadership: {}
     }
   }
 
@@ -43,6 +45,10 @@ class App extends Component {
       context: this,
       state: 'updates'
     })
+    this.leadershipRef = base.syncState('leaders', {
+      context: this,
+      state: 'leadership'
+    })
   }
 
   componentWillUnmount() {
@@ -51,6 +57,7 @@ class App extends Component {
     base.removeBinding(this.templatesRef);
     base.removeBinding(this.historyRef);
     base.removeBinding(this.updatesRef);
+    base.removeBinding(this.leadershipRef);
   }
 
   render() {
@@ -67,6 +74,7 @@ class App extends Component {
             <Route exact path="/utilities" render={() => (<Utils utils={this.state.utils} />)} />
             <Route exact path="/updates" render={() => (<Updates updates={this.state.updates} />)} />
             <Route exact path="/repository" render={() => (<Repository templates={this.state.templates} />)} />
+            <Route exact path="/leadership" render={() => (<Leadership leadership={this.state.leadership} />)} />
           </div>
         </div>
       </BrowserRouter>

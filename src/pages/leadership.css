@@ -1,0 +1,23 @@
+.leader-wrapper{
+  display: flex;
+  margin-right: 150px;
+  margin-top: 55px;
+}
+
+.image-wrapper{
+  margin-left: 45px;
+}
+
+.image{
+  height: 300px;
+}
+
+.text-wrapper{
+  text-align: left;
+  margin-left: 25px;
+}
+
+.position{
+  margin-top: -18px;
+  font-style: italic;
+}

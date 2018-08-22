@@ -1,24 +1,47 @@
-.navLink{
+.navlink{
   text-decoration: none;
   font-size: 30px;
-  color: black;
+  color: white;
   background-color: #FF9900;
-  padding: 15px 40px;
+  padding: 35px 40px;
   margin-left: 20px;
+  border-radius: 15px;
+  line-height: 25px;
+  vertical-align: bottom;
 }
 
 .navLink:hover{
   background-color: #f9ab36;
 }
 
+.first-navlink{
+  margin-left: 45px;
+}
+
+.text-alignment{
+  display: inline-block;
+  vertical-align: bottom;
+  margin-bottom: -30px;
+}
 .menu-bar{
   display: flex;
-  margin-top: 70px;
   justify-content: flex-start;
+  margin-top: 10px;
 }
 
 .selected{
   text-decoration: none;
   color: white !important;
-  background-color: #f9ab36;
+  background-color: #117fc2;
+}
+
+.logo{
+  height: 100px;
+  margin-left: 70px;
+  margin-top: 30px;
+}
+
+.logo-wrapper{
+  width:100%;
+  text-align: left;
 }
