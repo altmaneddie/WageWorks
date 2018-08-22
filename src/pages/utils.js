@@ -28,7 +28,7 @@ class Utils extends React.Component {
             myUtils.map((el, k) => {
               return (
                 <li key={k} id={k} onClick={this.showUtil} className="util-wrapper">
-                  <h3>{utils[el].name}</h3>
+                  <h3 className="util-title">{utils[el].name}</h3>
                 </li>
               )
             })
@@ -40,8 +40,28 @@ class Utils extends React.Component {
             <h2>{utils[myUtils[this.state.selected]].name}</h2>
             <br />
             <hr />
-            <p>{utils[myUtils[this.state.selected]].text}</p>
+            <div className="util-text-wrappe">
+              <p>{utils[myUtils[this.state.selected]].text}</p>
+            </div >
+            <hr />
           </div>
+        }
+        {
+          (this.state.selected !== "" && utils[myUtils[this.state.selected]].photos !== undefined) && (
+            <div>
+              <h2>Related photos</h2>
+              <ul className="photo-list">
+                {(utils[myUtils[this.state.selected]].photos).map((el, k) => {
+                  return (
+                    <li className="photo-item" >
+                      <span>{k}</span>
+                      <img src={el} />
+                    </li>
+                  )
+                })}
+              </ul>
+            </div>
+          )
         }
       </div>
     )

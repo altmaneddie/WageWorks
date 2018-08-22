@@ -27,8 +27,6 @@ class Teams extends React.Component {
     // const myHistories = Object.keys(this.props.history);
     // const history = this.props.history;
 
-    console.log(myTeams[this.state.selected])
-
     return (
       <div>
         <div></div>
@@ -46,10 +44,11 @@ class Teams extends React.Component {
 
         {(this.state.selected) && (
           <div>
-            <div>
-              <h4>{`Brief history of ${myTeams[this.state.selected]}`}</h4>
+            <div className="history-div">
+              <h2>{`Brief history of ${myTeams[this.state.selected]}`}</h2>
               <p>{this.props.history[myTeams[this.state.selected]].text}</p>
             </div>
+            <hr />
             <div>
               <Member data={team[myTeams[this.state.selected]]} />
             </div>
