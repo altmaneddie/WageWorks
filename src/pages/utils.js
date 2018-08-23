@@ -40,7 +40,7 @@ class Utils extends React.Component {
             <h2>{utils[myUtils[this.state.selected]].name}</h2>
             <br />
             <hr />
-            <div className="util-text-wrappe">
+            <div className="util-text-wrapper">
               <p>{utils[myUtils[this.state.selected]].text}</p>
             </div >
             <hr />

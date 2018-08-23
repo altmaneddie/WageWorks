@@ -1,6 +1,6 @@
 import React from 'react';
 import './teams.css';
-import {Modal, ModalBody} from 'react-bootstrap';
+import { Modal, ModalBody } from 'react-bootstrap';
 import Member from '../components/member';
 
 class Teams extends React.Component {
@@ -34,7 +34,7 @@ class Teams extends React.Component {
   }
 
   render() {
-    
+
     const myTeams = Object.keys(this.props.teams);
     const team = this.props.teams;
 
@@ -64,13 +64,11 @@ class Teams extends React.Component {
             </div>
           </div>
         )}
-        <div className="modal-container">
         <Modal show={this.state.show} onHide={this.closeModal} >
           <Modal.Body>
             <img src={this.state.src} />
           </Modal.Body>
         </Modal>
-        </div>
       </div>
     )
   }

@@ -1,5 +1,5 @@
 .utils-list{
-  margin-bottom: 65px;
+  margin-bottom: 45px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -8,6 +8,7 @@
 
 .util-wrapper{
 margin-right: 5px;
+padding-top:5px;
 padding-left: 10px;
 padding-right: 10px;
 background: #117fc2;
@@ -46,9 +47,8 @@ text-decoration: none;
 }
 
 
-.util-text-wrappe{
-  margin-left: 75px;
-  margin-right: 75px;
+.util-text-wrapper{
+  margin-right: 45px;
 }
 
 .photo-list{
@@ -56,7 +56,7 @@ text-decoration: none;
 }
 
 .photo-item{
-  margin-left: 30 px
+  margin-left: 30px;
 }
 
 .photo-number{
