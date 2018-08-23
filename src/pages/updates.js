@@ -6,12 +6,13 @@ class Updates extends React.Component {
   render() {
 
     const myUpdates = Object.keys(this.props.updates);
+    const revUpdates = myUpdates.reverse();
     const updates = this.props.updates;
 
     return (
       <div>
         {
-          myUpdates.map((el, k) => {
+          revUpdates.map((el, k) => {
             return (
               <div key={k} className="update-wrapper">
                 <h1>{updates[el].title}</h1>

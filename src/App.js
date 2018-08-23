@@ -9,6 +9,7 @@ import Repository from './pages/repository';
 import Updates from './pages/updates';
 import Leadership from './pages/leadership';
 import Teams from './pages/teams';
+import Connections from './pages/connections';
 
 class App extends Component {
 
@@ -20,7 +21,8 @@ class App extends Component {
       templates: {},
       history: {},
       updates: {},
-      leadership: {}
+      leadership: {},
+      connections: {}
     }
   }
 
@@ -49,6 +51,10 @@ class App extends Component {
       context: this,
       state: 'leadership'
     })
+    this.connectionsRef = base.syncState('connections', {
+      context: this,
+      state: 'connections'
+    })
   }
 
   componentWillUnmount() {
@@ -75,6 +81,7 @@ class App extends Component {
             <Route exact path="/updates" render={() => (<Updates updates={this.state.updates} />)} />
             <Route exact path="/repository" render={() => (<Repository templates={this.state.templates} />)} />
             <Route exact path="/leadership" render={() => (<Leadership leadership={this.state.leadership} />)} />
+            <Route exact path="/connections" render={() => (<Connections connections={this.state.connections} />)} />
           </div>
         </div>
       </BrowserRouter>

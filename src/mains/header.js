@@ -17,6 +17,7 @@ class Header extends React.Component {
         <div className="menu-bar">
           <NavLink activeClassName="selected" className="navlink first-navlink" to="/teams"><span className={`text-alignment`}>Teams</span></NavLink>
           <NavLink activeClassName="selected" className="navlink" to="/utilities"><span className={`text-alignment`}>Utilities</span></NavLink>
+          <NavLink activeClassName="selected" className="navlink" to="/connections"><span className={`text-alignment`}>Connections</span></NavLink>
           <NavLink activeClassName="selected" className="navlink" to="/repository"><span className={`text-alignment`}>Repository</span></NavLink>
           <NavLink activeClassName="selected" className="navlink" to="/updates"><span className={`text-alignment`}>Updates</span></NavLink>
           <NavLink activeClassName="selected" className="navlink" to="/leadership"><span className={`text-alignment`}>Leadership</span></NavLink>

@@ -7,7 +7,6 @@ class Teams extends React.Component {
     super();
     this.state = {
       selected: '',
-      name: ''
     }
   }
 
@@ -26,7 +25,6 @@ class Teams extends React.Component {
 
     return (
       <div>
-        <div></div>
         <div className='teams' >
           {
             myTeams.map((el, k) => {
