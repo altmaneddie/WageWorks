@@ -1,5 +1,6 @@
 import React from 'react';
 import './teams.css';
+import {Modal, ModalBody} from 'react-bootstrap';
 import Member from '../components/member';
 
 class Teams extends React.Component {
@@ -7,19 +8,33 @@ class Teams extends React.Component {
     super();
     this.state = {
       selected: '',
+      show: false,
+      src: ''
     }
   }
 
   showTeam = (e) => {
-    console.log(e.currentTarget)
     this.setState({
-      selected: e.currentTarget.id,
-      name: e.currentTarget.name
+      selected: e.currentTarget.id
+    })
+  }
+
+  openModal = (e) => {
+    this.setState({
+      show: true,
+      src: e.currentTarget.src
+    })
+  }
+
+  closeModal = () => {
+    this.setState({
+      show: false,
+      src: ''
     })
   }
 
   render() {
-
+    
     const myTeams = Object.keys(this.props.teams);
     const team = this.props.teams;
 
@@ -41,14 +56,21 @@ class Teams extends React.Component {
           <div>
             <div className="history-div">
               <h2>{`Brief history of ${myTeams[this.state.selected]}`}</h2>
-              <p>{this.props.history[myTeams[this.state.selected]].text}</p>
+              <p clas="history-text">{this.props.history[myTeams[this.state.selected]].text}</p>
             </div>
             <hr />
             <div>
-              <Member data={team[myTeams[this.state.selected]]} />
+              <Member data={team[myTeams[this.state.selected]]} openModal={this.openModal} />
             </div>
           </div>
         )}
+        <div className="modal-container">
+        <Modal show={this.state.show} onHide={this.closeModal} >
+          <Modal.Body>
+            <img src={this.state.src} />
+          </Modal.Body>
+        </Modal>
+        </div>
       </div>
     )
   }

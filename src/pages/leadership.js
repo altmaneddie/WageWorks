@@ -7,15 +7,14 @@ class Leadership extends React.Component {
 
     const myLeaders = Object.keys(this.props.leadership);
     const leaders = this.props.leadership;
-    console.log(leaders, myLeaders);
 
     return (
       <div>
         {
           myLeaders.map((el, k) => {
             return (
-              <div>
-                <div key={k} className="leader-wrapper">
+              <div key={k} >
+                <div className="leader-wrapper">
                   <div className="image-wrapper">
                     <img className="image" src={leaders[el].photo} />
                   </div>

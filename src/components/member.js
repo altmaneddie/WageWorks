@@ -5,7 +5,6 @@ class Member extends React.Component {
   render() {
     const teamMembers = Object.keys(this.props.data);
     const teamData = this.props.data;
-    // console.log(teamMembers)
 
     return (
       <div >
@@ -14,7 +13,7 @@ class Member extends React.Component {
             return (
               <div key={k}>
                 <ul className="member-ul">
-                  <li><img src={teamData[el].photo} className="member-img" /></li>
+                  <li><img src={teamData[el].photo} className="member-img" onClick={this.props.openModal} /></li>
                   <li>{`Name: `}</li>
                   <div className="long-text-wrapper">
                     <li className="long-text-data">{teamData[el].last_name} {teamData[el].first_name}</li>
