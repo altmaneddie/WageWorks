@@ -49,7 +49,7 @@ class Utils extends React.Component {
         {
           (this.state.selected !== "" && utils[myUtils[this.state.selected]].photos !== undefined) && (
             <div>
-              <h2>Related photos</h2>
+              <h2>Relevant photos</h2>
               <ul className="photo-list">
                 {(utils[myUtils[this.state.selected]].photos).map((el, k) => {
                   return (
