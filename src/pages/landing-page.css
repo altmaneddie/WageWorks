@@ -10,3 +10,7 @@
 .photo-separator{
   font-weight: bold
 }
+
+.modal-dialog {
+  width: fit-content;
+}
