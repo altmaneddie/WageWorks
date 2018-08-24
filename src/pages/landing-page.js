@@ -44,7 +44,7 @@ class LandingPage extends React.Component {
             {photos && photos.map((el, k) => {
               return (
                 <div key={k} id={k} src={el} className="img-wrapper">
-                  <img className="image" src={el} onClick={this.openModal} />
+                  <img className="image" alt="presentation" src={el} onClick={this.openModal} />
                   <hr className="photo-separator" />
                 </div>
               )
@@ -54,7 +54,7 @@ class LandingPage extends React.Component {
         </div>
         <Modal dialogClassName="landing-modal" show={this.state.show} onHide={this.closeModal} >
           <Modal.Body>
-            <img src={this.state.src} />
+            <img alt="modal" src={this.state.src} />
           </Modal.Body>
         </Modal>
       </div>

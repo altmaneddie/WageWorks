@@ -1,0 +1,7 @@
+.templates-list{
+  display: flex;
+}
+
+.template{
+  margin-left: 45px;
+}

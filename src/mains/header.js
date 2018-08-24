@@ -11,7 +11,7 @@ class Header extends React.Component {
       <div>
         <div className="logo-wrapper">
           <Link  to="/">
-            <img className="logo" src={logo} />
+            <img alt="ww-logo" className="logo" src={logo} />
           </Link>
         </div>
         <div className="menu-bar">

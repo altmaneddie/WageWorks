@@ -72,7 +72,7 @@ class Utils extends React.Component {
                   return (
                     <li key={k} className="photo-item" >
                       <span className="photo-number">{k}</span>
-                      <img className="img" src={el} onClick={this.openModal} />
+                      <img alt="util" className="img" src={el} onClick={this.openModal} />
                     </li>
                   )
                 })}
@@ -82,7 +82,7 @@ class Utils extends React.Component {
         }
         <Modal show={this.state.show} onHide={this.closeModal} >
           <Modal.Body>
-            <img src={this.state.src} />
+            <img alt="util-modal" src={this.state.src} />
           </Modal.Body>
         </Modal>
       </div>

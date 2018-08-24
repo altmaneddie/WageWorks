@@ -40,17 +40,17 @@ class Teams extends React.Component {
 
     return (
       <div>
-        <div className='teams' >
+        <ul className='teams' >
           {
             myTeams.map((el, k) => {
               return (
-                <div className="list-member-wrapper" key={k} id={k} name={el} onClick={this.showTeam}>
-                  <h1 className="list-member">{`${el}`}</h1>
-                </div>
+                <li className="list-member-wrapper" key={k} id={k} name={el} onClick={this.showTeam}>
+                  <h3 className="list-member">{`${el}`}</h3>
+                </li>
               );
             })
           }
-        </div >
+        </ul >
 
         {(this.state.selected) && (
           <div>
@@ -66,7 +66,7 @@ class Teams extends React.Component {
         )}
         <Modal show={this.state.show} onHide={this.closeModal} >
           <Modal.Body>
-            <img src={this.state.src} />
+            <img alt="modal" src={this.state.src} />
           </Modal.Body>
         </Modal>
       </div>

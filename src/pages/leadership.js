@@ -16,7 +16,7 @@ class Leadership extends React.Component {
               <div key={k} >
                 <div className="leader-wrapper">
                   <div className="image-wrapper">
-                    <img className="image" src={leaders[el].photo} />
+                    <img alt="leader" className="image" src={leaders[el].photo} />
                   </div>
                   <div className="text-wrapper">
                     <h1>{leaders[el].name}</h1>

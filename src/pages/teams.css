@@ -1,4 +1,4 @@
-.list-member{
+.list-member-wrapper{
 margin-right: 75px;
 padding-top: 50px;
 padding-left: 25px;
@@ -20,7 +20,7 @@ display: inline-block;
 cursor: pointer;
 }
 
-.list-member:hover {
+.list-member-wrapper:hover {
   background: #1E62D0;
   background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
   background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
@@ -33,8 +33,6 @@ cursor: pointer;
 .teams{
   display: flex;
   justify-content: flex-start;
-  margin-left: 45px;
-  margin-top: -20px;
 }
 
 .history-div{
@@ -46,3 +44,4 @@ cursor: pointer;
 .history-text{
   font-size: 20px;
 }
+

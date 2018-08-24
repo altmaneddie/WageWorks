@@ -23,7 +23,8 @@ class App extends Component {
       history: {},
       updates: {},
       leadership: {},
-      connections: {}
+      connections: {},
+      repository: {}
     }
   }
 
@@ -71,6 +72,7 @@ class App extends Component {
     base.removeBinding(this.updatesRef);
     base.removeBinding(this.leadershipRef);
     base.removeBinding(this.connectionsRef);
+    base.removeBinding(this.repositoryRef);
   }
 
   render() {
