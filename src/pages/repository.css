@@ -5,3 +5,7 @@
 .template{
   margin-left: 45px;
 }
+
+.template-text{
+  max-width: 300px;
+}

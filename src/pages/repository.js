@@ -15,7 +15,7 @@ class Repository extends React.Component {
             return (
               <div className="template">
                 <h3>{templates[el].title}</h3>
-                <p>{templates[el].text}</p>
+                <p className="template-text">{templates[el].text}</p>
                 <a target="_blank" href={templates[el].link}>{templates[el].link}</a>
               </div>
             )
