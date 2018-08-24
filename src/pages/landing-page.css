@@ -14,3 +14,7 @@
 .modal-dialog {
   width: fit-content;
 }
+
+.image{
+  cursor: pointer;
+}
