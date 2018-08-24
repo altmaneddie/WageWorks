@@ -16,6 +16,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      general: {},
       teams: {},
       utils: {},
       templates: {},
@@ -27,6 +28,10 @@ class App extends Component {
   }
 
   componentWillMount() {
+    this.generalRef = base.syncState('general', {
+      context: this,
+      state: 'general'
+    })
     this.teamsRef = base.syncState('teams', {
       context: this,
       state: 'teams'
@@ -58,12 +63,14 @@ class App extends Component {
   }
 
   componentWillUnmount() {
+    base.removeBinding(this.generalRef);
     base.removeBinding(this.teamsRef);
     base.removeBinding(this.utilsRef);
     base.removeBinding(this.templatesRef);
     base.removeBinding(this.historyRef);
     base.removeBinding(this.updatesRef);
     base.removeBinding(this.leadershipRef);
+    base.removeBinding(this.connectionsRef);
   }
 
   render() {
@@ -75,7 +82,7 @@ class App extends Component {
             <hr />
           </div>
           <div>
-            <Route exact path="/" render={() => (<LandingPage teams={this.state.teams} />)} />
+            <Route exact path="/" render={() => (<LandingPage general={this.state.general} />)} />
             <Route exact path="/teams" render={() => (<Teams teams={this.state.teams} history={this.state.history} />)} />
             <Route exact path="/utilities" render={() => (<Utils utils={this.state.utils} />)} />
             <Route exact path="/updates" render={() => (<Updates updates={this.state.updates} />)} />

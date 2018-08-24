@@ -1,17 +1,34 @@
 import React from 'react';
+import { Modal } from 'react-bootstrap';
 import './utils.css';
 
 class Utils extends React.Component {
   constructor() {
     super();
     this.state = {
-      selected: ''
+      selected: '',
+      show: false,
+      src: ''
     }
   }
 
   showUtil = (e) => {
     this.setState({
       selected: e.currentTarget.id
+    })
+  }
+
+  openModal = (e) => {
+    this.setState({
+      show: true,
+      src: e.currentTarget.src
+    })
+  }
+
+  closeModal = () => {
+    this.setState({
+      show: false,
+      src: ''
     })
   }
 
@@ -55,7 +72,7 @@ class Utils extends React.Component {
                   return (
                     <li key={k} className="photo-item" >
                       <span className="photo-number">{k}</span>
-                      <img src={el} />
+                      <img className="img" src={el} onClick={this.openModal} />
                     </li>
                   )
                 })}
@@ -63,6 +80,11 @@ class Utils extends React.Component {
             </div>
           )
         }
+        <Modal show={this.state.show} onHide={this.closeModal} >
+          <Modal.Body>
+            <img src={this.state.src} />
+          </Modal.Body>
+        </Modal>
       </div>
     )
   }

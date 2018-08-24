@@ -21,6 +21,7 @@ hr{
 
 .member-img{
   height: 200px;
+  cursor: pointer;
 }
 
 .long-text-wrapper{

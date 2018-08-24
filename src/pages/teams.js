@@ -1,6 +1,6 @@
 import React from 'react';
 import './teams.css';
-import { Modal, ModalBody } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import Member from '../components/member';
 
 class Teams extends React.Component {
