@@ -16,6 +16,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      banner: {},
       general: {},
       teams: {},
       utils: {},
@@ -29,6 +30,10 @@ class App extends Component {
   }
 
   componentWillMount() {
+    this.bannerRef = base.syncState('banner', {
+      context: this,
+      state: 'banner'
+    })
     this.generalRef = base.syncState('general', {
       context: this,
       state: 'general'
@@ -73,14 +78,15 @@ class App extends Component {
     base.removeBinding(this.leadershipRef);
     base.removeBinding(this.connectionsRef);
     base.removeBinding(this.repositoryRef);
+    base.removeBinding(this.bannerRef);
   }
-
+  
   render() {
     return (
       <BrowserRouter>
         <div className="App">
           <div className='header'>
-            <Header />
+            <Header banner={this.state.banner} />
             <hr />
           </div>
           <div>

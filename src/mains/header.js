@@ -14,6 +14,9 @@ class Header extends React.Component {
             <img alt="ww-logo" className="logo" src={logo} />
           </Link>
         </div>
+        <div className="banner">
+          <p className="banner-text">{this.props.banner.text} </p>
+        </div>
         <div className="menu-bar">
           <NavLink activeClassName="selected" className="navlink first-navlink" to="/teams"><span className={`text-alignment`}>Teams</span></NavLink>
           <NavLink activeClassName="selected" className="navlink" to="/utilities"><span className={`text-alignment`}>Utilities</span></NavLink>

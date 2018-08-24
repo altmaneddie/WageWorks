@@ -45,3 +45,17 @@
   width:100%;
   text-align: left;
 }
+
+.banner{
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  background-color: #117fc2;
+  color:white;
+  max-width: 1300px;
+}
+
+.banner-text{
+  font-weight: bold;
+  font-size: 15px;
+}
