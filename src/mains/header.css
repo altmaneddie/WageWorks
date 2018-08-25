@@ -47,12 +47,11 @@
 }
 
 .banner{
-  position: fixed;
-  right: 20px;
-  top: 15px;
+  position: absolute;
+  top: 0px;
   background-color: #117fc2;
   color:white;
-  max-width: 622px;
+  width: 100%;
 }
 
 .banner-text{
