@@ -13,10 +13,10 @@ class Repository extends React.Component {
         {
           myTemplates.map((el, k) => {
             return (
-              <div className="template">
+              <div key={k} className="template">
                 <h3>{templates[el].title}</h3>
                 <p className="template-text">{templates[el].text}</p>
-                <a target="_blank" href={templates[el].link}>{templates[el].link}</a>
+                <a target="_blank" href={`https://${templates[el].link}`}>{templates[el].link}</a>
               </div>
             )
           })

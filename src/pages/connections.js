@@ -15,13 +15,13 @@ class Connections extends React.Component {
       selected: e.currentTarget.id,
       data: e.currentTarget.data
     })
-    console.log(e.currentTarget);
   }
 
   render() {
 
     const myCon = Object.keys(this.props.connections);
     const con = this.props.connections;
+    let myPath = con[myCon[this.state.selected]];
 
     return (
       <div>
@@ -40,15 +40,14 @@ class Connections extends React.Component {
           </div>
           <hr />
         </div>
-
         {(this.state.selected) && (
           <div className="members-list">
-            {con[myCon[this.state.selected]].members.map((el, k) => {
+            {Object.keys(myPath.members).map((el, k) => {
               return (
                 <li className="member" key={k}>
-                  <div>Name: {el.name}</div>
-                  <div>Position: {el.position}</div>
-                  <div>E-mail: {el.email}</div>
+                  <div>Name: {myPath.members[el].name}</div>
+                  <div>Position: {myPath.members[el].position}</div>
+                  <div>E-mail: {myPath.members[el].email}</div>
                   <hr />
                 </li>
               )

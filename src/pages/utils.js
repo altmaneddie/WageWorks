@@ -36,7 +36,7 @@ class Utils extends React.Component {
 
     const myUtils = Object.keys(this.props.utils);
     const utils = this.props.utils;
-    console.log(myUtils, utils);
+    const myPath = utils[myUtils[this.state.selected]];
 
     return (
       <div>
@@ -54,21 +54,21 @@ class Utils extends React.Component {
         {
           (this.state.selected !== "") &&
           <div>
-            <h2>{utils[myUtils[this.state.selected]].name}</h2>
+            <h2>{myPath.name}</h2>
             <br />
             <hr />
             <div className="util-text-wrapper">
-              <p>{utils[myUtils[this.state.selected]].text}</p>
+              <p>{myPath.text}</p>
             </div >
             <hr />
           </div>
         }
         {
-          (this.state.selected !== "" && utils[myUtils[this.state.selected]].photos !== undefined) && (
+          (this.state.selected !== "" && myPath.photos !== undefined) && (
             <div>
               <h2>Relevant photos</h2>
               <ul className="photo-list">
-                {(utils[myUtils[this.state.selected]].photos).map((el, k) => {
+                {(myPath.photos).map((el, k) => {
                   return (
                     <li key={k} className="photo-item" >
                       <span className="photo-number">{k}</span>

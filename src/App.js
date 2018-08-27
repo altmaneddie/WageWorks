@@ -80,7 +80,7 @@ class App extends Component {
     base.removeBinding(this.repositoryRef);
     base.removeBinding(this.bannerRef);
   }
-  
+
   render() {
     return (
       <BrowserRouter>

@@ -10,12 +10,11 @@ class Header extends React.Component {
 
     const myBanners = Object.keys(this.props.banner);
     const banners = this.props.banner;
-  
+
     let bannerText = myBanners.map((el) => {
       return banners[el].text
-    }).join("<  =  >");
+    }).join("  <  =  >  ");
 
-    console.log(bannerText);
     return bannerText;
   }
 

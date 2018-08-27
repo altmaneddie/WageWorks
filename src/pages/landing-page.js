@@ -29,6 +29,7 @@ class LandingPage extends React.Component {
   render() {
     const photos = this.props.general.photos;
 
+
     return (
       <div>
         <div>
@@ -41,10 +42,10 @@ class LandingPage extends React.Component {
           <h1>Photo Gallery</h1>
           <hr />
           <div className="image-list">
-            {photos && photos.map((el, k) => {
+            {photos && Object.keys(photos).map((el, k) => {
               return (
                 <div key={k} id={k} src={el} className="img-wrapper">
-                  <img className="image" alt="presentation" src={el} onClick={this.openModal} />
+                  <img className="image" alt="presentation" src={photos[el]} onClick={this.openModal} />
                   <hr className="photo-separator" />
                 </div>
               )

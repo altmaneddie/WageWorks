@@ -1,7 +1,28 @@
 import React from 'react';
+import { Modal } from 'react-bootstrap';
 import './leadership.css';
 
 class Leadership extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      show: false,
+      src: ''
+    }
+  }
+  openModal = (e) => {
+    this.setState({
+      show: true,
+      src: e.currentTarget.src
+    })
+  }
+
+  closeModal = () => {
+    this.setState({
+      show: false,
+      src: ''
+    })
+  }
 
   render() {
 
@@ -16,7 +37,7 @@ class Leadership extends React.Component {
               <div key={k} >
                 <div className="leader-wrapper">
                   <div className="image-wrapper">
-                    <img alt="leader" className="image" src={leaders[el].photo} />
+                    <img alt="leader" className="image" src={leaders[el].photo} onClick={this.openModal} />
                   </div>
                   <div className="text-wrapper">
                     <h1>{leaders[el].name}</h1>
@@ -30,6 +51,11 @@ class Leadership extends React.Component {
             )
           })
         }
+        <Modal show={this.state.show} onHide={this.closeModal} >
+          <Modal.Body>
+            <img alt="modal" src={this.state.src} />
+          </Modal.Body>
+        </Modal>
       </div>
     )
   }

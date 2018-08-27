@@ -37,6 +37,7 @@ class Teams extends React.Component {
 
     const myTeams = Object.keys(this.props.teams);
     const team = this.props.teams;
+    const myPath = team[myTeams[this.state.selected]];
 
     return (
       <div>
@@ -60,7 +61,7 @@ class Teams extends React.Component {
             </div>
             <hr />
             <div>
-              <Member data={team[myTeams[this.state.selected]]} openModal={this.openModal} />
+              <Member data={myPath} openModal={this.openModal} />
             </div>
           </div>
         )}
