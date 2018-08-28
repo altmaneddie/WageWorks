@@ -28,7 +28,7 @@ class Header extends React.Component {
           </Link>
         </div>
         <div className="banner">
-          <Marquee text={this.bannerToString()} leading={80} hoverToStop={true} loop={true} className="banner-text"></Marquee>
+          <Marquee text={this.bannerToString()} leading={20} hoverToStop={true} loop={true} className="banner-text"></Marquee>
         </div>
         <div className="menu-bar">
           <NavLink activeClassName="selected" className="navlink first-navlink" to="/teams"><span className={`text-alignment`}>Teams</span></NavLink>

@@ -8,4 +8,9 @@
 
 .template-text{
   max-width: 300px;
+  font-size: 16px;
+}
+
+.template-link{
+  font-size: 16px;
 }

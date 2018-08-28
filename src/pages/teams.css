@@ -3,12 +3,7 @@ margin-right: 75px;
 padding-top: 50px;
 padding-left: 25px;
 padding-right: 25px;
-background: #117fc2;
-background-image: -webkit-linear-gradient(top, #3D94F6, #1E62D0);
-background-image: -moz-linear-gradient(top, #3D94F6, #1E62D0);
-background-image: -ms-linear-gradient(top, #3D94F6, #1E62D0);
-background-image: -o-linear-gradient(top, #3D94F6, #1E62D0);
-background-image: linear-gradient(to bottom, #3D94F6, #1E62D0);
+background-color: #117fc2;
 -webkit-border-radius: 15px;
 -moz-border-radius: 15px;
 border-radius: 15px;
@@ -21,12 +16,7 @@ cursor: pointer;
 }
 
 .list-member-wrapper:hover {
-  background: #1E62D0;
-  background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
-  background-image: -moz-linear-gradient(top, #1E62D0, #3D94F6);
-  background-image: -ms-linear-gradient(top, #1E62D0, #3D94F6);
-  background-image: -o-linear-gradient(top, #1E62D0, #3D94F6);
-  background-image: linear-gradient(to bottom, #1E62D0, #3D94F6);
+  background-color: #FF9900;
   text-decoration: none;
   }
 
@@ -42,6 +32,10 @@ cursor: pointer;
 }
 
 .history-text{
-  font-size: 20px;
+  font-size: 16px !important;
 }
 
+.teams-separator{
+  margin-left: 45px;
+  margin-right: 45px;
+}

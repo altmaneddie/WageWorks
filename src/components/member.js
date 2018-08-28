@@ -26,7 +26,7 @@ class Member extends React.Component {
                   </div>
                   <li className="data-li">{`Birthday: ${teamData[el].birthday}`}</li>
                 </ul>
-                <hr />
+                <hr  className="member-separator"/>
               </div>
             )
           })

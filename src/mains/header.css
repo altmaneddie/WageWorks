@@ -51,7 +51,9 @@
   top: 0px;
   background-color: #117fc2;
   color:white;
-  width: 100%;
+  width: 95%;
+  left:2.5%;
+  right:2.5%;
 }
 
 .banner-text{

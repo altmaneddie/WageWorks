@@ -31,8 +31,8 @@ class Connections extends React.Component {
               myCon.map((el, k) => {
                 return (
                   <div className="connections-list" key={k} id={k} data={el} onClick={this.showConnection}>
-                    <h1>{con[el].name}</h1>
-                    <h3>{con[el].role}</h3>
+                    <h3 className="button-text-title">{con[el].name}</h3>
+                    <h3 className="button-text">{con[el].role}</h3>
                   </div>
                 )
               })
@@ -48,7 +48,7 @@ class Connections extends React.Component {
                   <div>Name: {myPath.members[el].name}</div>
                   <div>Position: {myPath.members[el].position}</div>
                   <div>E-mail: {myPath.members[el].email}</div>
-                  <hr />
+                  <hr className="member-decorator" />
                 </li>
               )
             })}

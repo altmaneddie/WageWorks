@@ -7,5 +7,17 @@
   text-align: end;
   margin-right: 45px;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
+}
+
+.update-title{
+  font-weight: bold;
+}
+
+.update-subtitle{
+  font-weight: bold;
+}
+
+.update-text{
+  font-size: 16px;
 }
