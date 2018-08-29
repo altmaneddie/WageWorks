@@ -17,4 +17,6 @@
 
 .image{
   cursor: pointer;
+  min-height: 500px;
+  max-height: 900px;
 }
