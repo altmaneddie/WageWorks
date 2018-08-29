@@ -30,29 +30,33 @@ class App extends Component {
   }
 
   componentWillMount() {
-    this.bannerRef = base.syncState('banner', {
-      context: this,
-      state: 'banner'
-    })
     this.generalRef = base.syncState('general', {
       context: this,
       state: 'general'
+    })
+    this.bannerRef = base.syncState('banner', {
+      context: this,
+      state: 'banner'
     })
     this.teamsRef = base.syncState('teams', {
       context: this,
       state: 'teams'
     })
+    this.historyRef = base.syncState('history', {
+      context: this,
+      state: 'history'
+    })
     this.utilsRef = base.syncState('utils', {
       context: this,
       state: 'utils'
     })
+    this.connectionsRef = base.syncState('connections', {
+      context: this,
+      state: 'connections'
+    })
     this.templatesRef = base.syncState('templates', {
       context: this,
       state: 'templates'
-    })
-    this.historyRef = base.syncState('history', {
-      context: this,
-      state: 'history'
     })
     this.updatesRef = base.syncState('updates', {
       context: this,
@@ -62,23 +66,19 @@ class App extends Component {
       context: this,
       state: 'leadership'
     })
-    this.connectionsRef = base.syncState('connections', {
-      context: this,
-      state: 'connections'
-    })
+
   }
 
   componentWillUnmount() {
     base.removeBinding(this.generalRef);
+    base.removeBinding(this.bannerRef);
     base.removeBinding(this.teamsRef);
-    base.removeBinding(this.utilsRef);
-    base.removeBinding(this.templatesRef);
     base.removeBinding(this.historyRef);
+    base.removeBinding(this.utilsRef);
+    base.removeBinding(this.connectionsRef);
+    base.removeBinding(this.templatesRef);
     base.removeBinding(this.updatesRef);
     base.removeBinding(this.leadershipRef);
-    base.removeBinding(this.connectionsRef);
-    base.removeBinding(this.repositoryRef);
-    base.removeBinding(this.bannerRef);
   }
 
   render() {
