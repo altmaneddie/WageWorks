@@ -45,7 +45,7 @@ class LandingPage extends React.Component {
             {photos && Object.keys(photos).map((el, k) => {
               return (
                 <div key={k} id={k} src={el} className="img-wrapper">
-                  <img className="image" alt="presentation" src={photos[el]} onClick={this.openModal} />
+                  <img className="landing-image" alt="presentation" src={photos[el]} onClick={this.openModal} />
                   <hr className="photo-separator" />
                 </div>
               )

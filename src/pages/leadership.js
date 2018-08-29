@@ -37,7 +37,7 @@ class Leadership extends React.Component {
               <div key={k} >
                 <div className="leader-wrapper">
                   <div className="image-wrapper">
-                    <img alt="leader" className="image" src={leaders[el].photo} onClick={this.openModal} />
+                    <img className="leader-image" alt="leader" src={leaders[el].photo} onClick={this.openModal} />
                   </div>
                   <div className="text-wrapper">
                     <h1>{leaders[el].name}</h1>

@@ -71,7 +71,7 @@ class Utils extends React.Component {
                 {(myPath.photos).map((el, k) => {
                   return (
                     <li key={k} className="photo-item" >
-                      <span className="photo-number">{k + 1}</span>
+                      <span className="photo-number">{`${k + 1}.`}</span>
                       <img alt="util" className="img" src={el} onClick={this.openModal} />
                     </li>
                   )
