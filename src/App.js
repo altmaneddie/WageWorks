@@ -16,16 +16,15 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      banner: {},
       general: {},
+      banner: {},
       teams: {},
-      utils: {},
-      templates: {},
       history: {},
-      updates: {},
-      leadership: {},
+      utils: {},
       connections: {},
-      repository: {}
+      templates: {},
+      updates: {},
+      leadership: {}
     }
   }
 
