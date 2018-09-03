@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
 import { base } from './base';
-import Header from './mains/header';
+import Header from './header/header';
 import LandingPage from './pages/landing-page';
 import Utils from './pages/utils';
 import Repository from './pages/repository';
