@@ -5,6 +5,7 @@
   "dependencies": {
     "bootstrap": "3.3.4",
     "firebase": "^5.4.1",
+    "npm": "^6.4.1",
     "re-base": "^4.0.0",
     "react": "^16.4.2",
     "react-bootstrap": "^0.32.3",
