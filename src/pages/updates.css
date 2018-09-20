@@ -1,8 +1,8 @@
-.update-wrapper{
+.update-wrapper {
   margin: 25px 120px;
 }
 
-.update-date{
+.update-date {
   display: block;
   text-align: end;
   margin-right: 45px;
@@ -10,14 +10,14 @@
   font-size: 20px;
 }
 
-.update-title{
+.update-title {
   font-weight: bold;
 }
 
-.update-subtitle{
+.update-subtitle {
   font-weight: bold;
 }
 
-.update-text{
+.update-text {
   font-size: 16px;
 }

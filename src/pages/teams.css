@@ -1,41 +1,41 @@
-.list-member-wrapper{
-margin-right: 75px;
-padding-top: 50px;
-padding-left: 25px;
-padding-right: 25px;
-background-color: #117fc2;
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;
-color: #FFFFFF;
-font-size: 25px;
-border: solid #117fc2 0px;
-text-decoration: none;
-display: inline-block;
-cursor: pointer;
+.list-member-wrapper {
+  margin-right: 75px;
+  padding-top: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: #117fc2;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: 25px;
+  border: solid #117fc2 0px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .list-member-wrapper:hover {
-  background-color: #FF9900;
+  background-color: #ff9900;
   text-decoration: none;
-  }
+}
 
-.teams{
+.teams {
   display: flex;
   justify-content: flex-start;
 }
 
-.history-div{
+.history-div {
   margin-bottom: 60px;
   margin-left: 45px;
   margin-right: 45px;
 }
 
-.history-text{
+.history-text {
   font-size: 16px !important;
 }
 
-.teams-separator{
+.teams-separator {
   margin-left: 45px;
   margin-right: 45px;
 }

@@ -1,16 +1,16 @@
-.templates-list{
+.templates-list {
   display: flex;
 }
 
-.template{
+.template {
   margin-left: 45px;
 }
 
-.template-text{
+.template-text {
   max-width: 300px;
   font-size: 16px;
 }
 
-.template-link{
+.template-link {
   font-size: 16px;
 }

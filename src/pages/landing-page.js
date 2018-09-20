@@ -1,34 +1,32 @@
-import React from 'react';
-import { Modal } from 'react-bootstrap';
+import React from "react";
+import { Modal } from "react-bootstrap";
 import "./landing-page.css";
 
 class LandingPage extends React.Component {
-
   constructor() {
     super();
     this.state = {
       show: false,
-      src: ''
-    }
+      src: ""
+    };
   }
 
-  openModal = (e) => {
+  openModal = e => {
     this.setState({
       show: true,
       src: e.currentTarget.src
-    })
-  }
+    });
+  };
 
   closeModal = () => {
     this.setState({
       show: false,
-      src: ''
-    })
-  }
+      src: ""
+    });
+  };
 
   render() {
     const photos = this.props.general.photos;
-
 
     return (
       <div>
@@ -42,24 +40,34 @@ class LandingPage extends React.Component {
           <h1>Photo Gallery</h1>
           <hr />
           <div className="image-list">
-            {photos && Object.keys(photos).map((el, k) => {
-              return (
-                <div key={k} id={k} src={el} className="img-wrapper">
-                  <img className="landing-image" alt="presentation" src={photos[el]} onClick={this.openModal} />
-                  <hr className="photo-separator" />
-                </div>
-              )
-            })}
+            {photos &&
+              Object.keys(photos).map((el, k) => {
+                return (
+                  <div key={k} id={k} src={el} className="img-wrapper">
+                    <img
+                      className="landing-image"
+                      alt="presentation"
+                      src={photos[el]}
+                      onClick={this.openModal}
+                    />
+                    <hr className="photo-separator" />
+                  </div>
+                );
+              })}
           </div>
           <hr />
         </div>
-        <Modal dialogClassName="landing-modal" show={this.state.show} onHide={this.closeModal} >
+        <Modal
+          dialogClassName="landing-modal"
+          show={this.state.show}
+          onHide={this.closeModal}
+        >
           <Modal.Body>
             <img alt="modal" src={this.state.src} />
           </Modal.Body>
         </Modal>
       </div>
-    )
+    );
   }
 }
 

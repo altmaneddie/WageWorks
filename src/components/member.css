@@ -1,4 +1,4 @@
-.member-ul{
+.member-ul {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -6,32 +6,32 @@
   margin-right: 65px;
 }
 
-li{
+li {
   list-style: none;
   margin-left: 25px;
   font-size: 20px;
 }
 
-.long-text-data{
+.long-text-data {
   margin-left: 5px;
 }
 
-hr{
+hr {
   margin-left: 45px;
   margin-right: 45px;
 }
 
-.member-img{
+.member-img {
   height: 200px;
   cursor: pointer;
 }
 
-.long-text-wrapper{
+.long-text-wrapper {
   max-width: 550px;
   overflow-wrap: break-word;
 }
 
-.member-separator{
+.member-separator {
   margin-left: 65px;
   margin-right: 65px;
 }

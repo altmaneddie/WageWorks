@@ -1,53 +1,61 @@
-.connections{
+.connections {
   display: flex;
-  flex-wrap:  wrap;
+  flex-wrap: wrap;
   margin: 15px 35px;
   justify-content: flex-start;
 }
 
-.members-list{
+.members-list {
   display: flex;
   margin-left: 25px;
+  flex-wrap: wrap;
 }
 
-.member{
-  margin-left: 30;
-  text-align:left;
+.member {
+  margin-left: 30px;
+  text-align: left;
   font-size: 16px;
+  flex: 0 0 18%;
+  min-height: 100px;
+  border-bottom: solid 1px black;
+  margin-bottom: 30px;
 }
 
-.member-decorator{
+.word-breaker {
+  word-break: break-all;
+}
+.member-decorator {
   margin-left: 0px;
   margin-right: 0px;
 }
 
-.button-text-title{
+.button-text-title {
   font-size: 20px;
   font-weight: bold;
 }
 
-.button-text{
-  font-size: 20px
+.button-text {
+  font-size: 20px;
 }
 
-.connections-list{
-margin-right: 35px;
-margin-left: 10px;
-padding-left: 10px;
-padding-right: 10px;
-background-color: #117fc2;
--webkit-border-radius: 15px;
--moz-border-radius: 15px;
-border-radius: 15px;
-color: #FFFFFF;
-font-size: 20px;
-border: solid #117fc2 0px;
-text-decoration: none;
-display: inline-block;
-cursor: pointer;
+.connections-list {
+  margin-right: 35px;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #117fc2;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: 20px;
+  border: solid #117fc2 0px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .connections-list:hover {
-  background-color: #FF9900;
+  background-color: #ff9900;
   text-decoration: none;
-  }
+}

@@ -1,5 +1,5 @@
-import Rebase from 're-base';
-import firebase from 'firebase';
+import Rebase from "re-base";
+import firebase from "firebase";
 
 const config = {
   apiKey: "AIzaSyB5usetQdq1ycsX0MlUlUwA83n5l8lp3Kk",

@@ -1,23 +1,24 @@
-.leader-wrapper{
+.leader-wrapper {
   display: flex;
   margin-right: 150px;
   margin-top: 55px;
 }
 
-.image-wrapper{
+.image-wrapper {
   margin-left: 45px;
 }
 
-.leader-image{
+.leader-image {
   height: 200px;
+  cursor: pointer;
 }
 
-.text-wrapper{
+.text-wrapper {
   text-align: left;
   margin-left: 25px;
 }
 
-.position{
+.position {
   margin-top: -5px;
   font-style: italic;
 }
