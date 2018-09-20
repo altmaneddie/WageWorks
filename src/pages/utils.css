@@ -9,7 +9,6 @@
 .util-wrapper {
   margin-right: 75px;
   margin-bottom: 25px;
-  padding-top: 50px;
   padding-left: 25px;
   padding-right: 25px;
   background-color: #117fc2;
@@ -22,6 +21,11 @@
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+}
+
+.util-wrapper-selected {
+  background-color: #ff9900;
+  text-decoration: none;
 }
 
 .util-wrapper:hover {

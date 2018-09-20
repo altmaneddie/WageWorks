@@ -7,15 +7,16 @@ class Teams extends React.Component {
   constructor() {
     super();
     this.state = {
-      selected: "",
+      selected: undefined,
       show: false,
       src: ""
     };
   }
 
   showTeam = e => {
+    let currentId = parseInt(e.currentTarget.id, 10);
     this.setState({
-      selected: e.currentTarget.id
+      selected: currentId
     });
   };
 
@@ -44,10 +45,11 @@ class Teams extends React.Component {
           {myTeams.map((el, k) => {
             return (
               <li
-                className="list-member-wrapper"
+                className={`list-member-wrapper ${
+                  this.state.selected === k ? "list-member-selected" : ""
+                }`}
                 key={k}
                 id={k}
-                name={el}
                 onClick={this.showTeam}
               >
                 <h3 className="list-member">{`${el}`}</h3>
@@ -56,7 +58,7 @@ class Teams extends React.Component {
           })}
         </ul>
 
-        {this.state.selected && (
+        {this.state.selected !== undefined && (
           <div>
             <hr />
             <div className="history-div">

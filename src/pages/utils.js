@@ -6,7 +6,7 @@ class Utils extends React.Component {
   constructor() {
     super();
     this.state = {
-      selected: "",
+      selected: undefined,
       show: false,
       src: ""
     };
@@ -46,14 +46,18 @@ class Utils extends React.Component {
                 key={k}
                 id={k}
                 onClick={this.showUtil}
-                className="util-wrapper"
+                className={`util-wrapper ${
+                  parseInt(this.state.selected, 10) === k
+                    ? "util-wrapper-selected"
+                    : ""
+                }`}
               >
                 <h3 className="util-title">{utils[el].name}</h3>
               </li>
             );
           })}
         </ul>
-        {this.state.selected !== "" && (
+        {this.state.selected !== undefined && (
           <div>
             <h2>{myPath.name}</h2>
             <br />
@@ -64,7 +68,7 @@ class Utils extends React.Component {
             <hr className="section-separator" />
           </div>
         )}
-        {this.state.selected !== "" &&
+        {this.state.selected !== undefined &&
           myPath.photos !== undefined && (
             <div>
               <h2>Relevant photos</h2>

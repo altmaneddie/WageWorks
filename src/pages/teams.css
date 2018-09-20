@@ -1,6 +1,5 @@
 .list-member-wrapper {
   margin-right: 75px;
-  padding-top: 50px;
   padding-left: 25px;
   padding-right: 25px;
   background-color: #117fc2;
@@ -15,6 +14,10 @@
   cursor: pointer;
 }
 
+.list-member-selected {
+  background-color: #ff9900;
+  text-decoration: none;
+}
 .list-member-wrapper:hover {
   background-color: #ff9900;
   text-decoration: none;
