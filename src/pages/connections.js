@@ -50,7 +50,9 @@ class Connections extends React.Component {
                 <li className="member" key={k}>
                   <div>Name: {myPath.members[el].name}</div>
                   <div>Position: {myPath.members[el].position}</div>
-                  <div className="word-breaker">E-mail: {myPath.members[el].email}</div>
+                  <div className="word-breaker">
+                    E-mail: {myPath.members[el].email}
+                  </div>
                 </li>
               );
             })}
