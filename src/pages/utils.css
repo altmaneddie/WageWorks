@@ -7,7 +7,7 @@
 }
 
 .util-wrapper {
-  margin-right: 75px;
+  margin-right: -5px;
   margin-bottom: 25px;
   padding-left: 25px;
   padding-right: 25px;
@@ -44,6 +44,9 @@
   font-size: 16px;
 }
 
+.util-title {
+  margin-top: 10px;
+}
 ul {
   display: flex;
   -webkit-padding-start: 20px !important;

@@ -1,5 +1,5 @@
 .list-member-wrapper {
-  margin-right: 75px;
+  margin-right: -5px;
   padding-left: 25px;
   padding-right: 25px;
   background-color: #117fc2;
@@ -23,6 +23,9 @@
   text-decoration: none;
 }
 
+.list-member {
+  margin-top: 10px;
+}
 .teams {
   display: flex;
   justify-content: flex-start;

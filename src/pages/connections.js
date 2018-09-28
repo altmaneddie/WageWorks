@@ -5,7 +5,7 @@ class Connections extends React.Component {
   constructor() {
     super();
     this.state = {
-      selected: "",
+      selected: undefined,
       data: ""
     };
   }
@@ -29,7 +29,11 @@ class Connections extends React.Component {
             {myCon.map((el, k) => {
               return (
                 <div
-                  className="connections-list"
+                  className={`connections-list ${
+                    parseInt(this.state.selected, 10) === k
+                      ? "connections-list-selected"
+                      : ""
+                  }`}
                   key={k}
                   id={k}
                   data={el}
@@ -43,7 +47,7 @@ class Connections extends React.Component {
           </div>
           <hr />
         </div>
-        {this.state.selected && (
+        {this.state.selected !== undefined && (
           <div className="members-list">
             {Object.keys(myPath.members).map((el, k) => {
               return (
