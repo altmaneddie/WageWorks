@@ -31,13 +31,13 @@ class LandingPage extends React.Component {
     return (
       <div>
         <div>
-          <h1>History of the Team</h1>
+          <h1>History of Quality Assurance</h1>
           <hr />
           <div className="text">
             <p>{this.props.general.text}</p>
           </div>
           <hr />
-          <h1>Photo Gallery</h1>
+          <h1>Product Engineering - Quality Assurance (PEQA)</h1>
           <hr />
           <div className="image-list">
             {photos &&

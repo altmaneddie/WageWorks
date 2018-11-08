@@ -1,6 +1,7 @@
 .text {
   margin: 15px 75px;
   font-size: 16px;
+  text-align: justify;
 }
 
 .img-wrapper {

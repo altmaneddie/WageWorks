@@ -63,7 +63,7 @@ class Teams extends React.Component {
             <hr />
             <div className="history-div">
               <h2>{`Brief history of ${myTeams[this.state.selected]}`}</h2>
-              <p clas="history-text">
+              <p className="history-text">
                 {this.props.history[myTeams[this.state.selected]].text}
               </p>
             </div>
