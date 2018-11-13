@@ -35,3 +35,7 @@ hr {
   margin-left: 65px;
   margin-right: 65px;
 }
+
+.text-justified{
+  text-align: justify;
+}

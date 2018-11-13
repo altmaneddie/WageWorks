@@ -45,7 +45,7 @@ class Leadership extends React.Component {
                 <div className="text-wrapper">
                   <h1>{leaders[el].name}</h1>
                   <p className="position">{leaders[el].position}</p>
-                  <p>{leaders[el].text}</p>
+                  <p className="description-text">{leaders[el].text}</p>
                   <span className="update-date">{leaders[el].date}</span>
                 </div>
               </div>

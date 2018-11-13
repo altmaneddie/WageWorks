@@ -18,6 +18,10 @@
   margin-left: 25px;
 }
 
+.description-text {
+  text-align: justify;
+}
+
 .position {
   margin-top: -5px;
   font-style: italic;
