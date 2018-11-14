@@ -30,9 +30,9 @@ class Member extends React.Component {
                   teamData[el].platform
                 }`}</li>
                 <li className="data-li">{`Years: ${teamData[el].years}`}</li>
-                <li className="data-li text-justified">{`Hobbies:`}</li>
+                <li className="data-li">{`Hobbies:`}</li>
                 <div className="long-text-wrapper">
-                  <li className="long-text-data data-li">
+                  <li className="long-text-data text-justified data-li">
                     {teamData[el].hobbies}
                   </li>
                 </div>
