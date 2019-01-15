@@ -16,7 +16,7 @@ class Repository extends React.Component {
               <a
                 className="template-link"
                 target="_blank"
-                href={`https://${templates[el].link}`}
+                href={templates[el].link}
               >
                 {templates[el].link}
               </a>
