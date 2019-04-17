@@ -50,12 +50,10 @@ class Repository extends React.Component {
         {
           this.state.selected !== undefined && (
             <div className="members-list">
-
               <li className="member" key={this.state.selected} >
                 <div>Name: {myPath.content.title}</div>
-                <div>Link: {myPath.content.link}</div>
+                <div>Link: <a href={myPath.content.link}>{myPath.content.link}</a></div>
               </li>
-
             </div>
           )
         }
